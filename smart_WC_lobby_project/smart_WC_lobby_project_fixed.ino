@@ -1,12 +1,4 @@
-//#include <sim900.h>
-#include <Servo.h>
-Servo myservo;
 #include <SoftwareSerial.h>
-SoftwareSerial SIM900(2, 3);
-String number1 = "0932329328";
-String val;
-int baodong = 0;
-int gui = 0;
 
 #define CB_MQ A0    // Cảm biến MQ135
 #define buzz 9      // Còi hú

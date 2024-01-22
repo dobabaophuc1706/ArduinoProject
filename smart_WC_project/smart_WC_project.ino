@@ -2,21 +2,21 @@
 #include <Servo.h>
 Servo myservo;
 #include <SoftwareSerial.h>
-SoftwareSerial SIM900(2, 3);    // chân 2 arduino nối TX sim800A - chân 3 arduino nối với RX sim800A
-String number1 = "0932329328";  // nhập sdt cần gọi vào đây
+SoftwareSerial SIM900(2, 3);
+String number1 = "0932329328";  // Thay đổi SĐT
 String val;
 int baodong = 0;
 int gui = 0;
 
-#define CB_MQ A0    // cảm biến khí ga
-#define leddo 4     // điều khiển LED đỏ
-#define ledxanh 5   // điều khiển LED xanh
-#define ledtrang 6  //điều khiển LED trắng
-#define quat 7      // điều khiển role quạt
-#define maybom 8    // điều khiển role máy bơm
-#define buzz 9      // còi hú
-#define CB_IR 10    // cảm biến hồng ngoại
-#define servo 11    // servo
+#define CB_MQ A0    // Cảm biến MQ135
+#define leddo 4     // Điều khiển LED đỏ
+#define ledxanh 5   // Điều khiển LED xanh
+#define ledtrang 6  // Điều khiển LED trắng
+#define quat 7      // Điều khiển role quạt
+#define maybom 8    // Điều khiển role máy bơm
+#define buzz 9      // Còi hú
+#define CB_IR 10    // Cảm biến hồng ngoại
+#define servo 11    // Servo
 
 int dem = 0;
 
@@ -84,7 +84,9 @@ void loop() {
       digitalWrite(buzz, LOW);
       delay(200);
     }
-    //message();
+    // Tin nhắn
+    // message();
+    // Gọi
     call();
     gui = 1;
     baodong = 1;
@@ -113,8 +115,8 @@ void loop() {
     digitalWrite(ledtrang, LOW);  // Đèn tắt
     delay(500);
 
-    digitalWrite(quat, HIGH);     // quạt tắt
-    digitalWrite(ledxanh, HIGH);  // đèn sáng
-    digitalWrite(leddo, LOW);     // đèn tắt
+    digitalWrite(quat, HIGH);     // Quạt tắt
+    digitalWrite(ledxanh, HIGH);  // Đèn sáng
+    digitalWrite(leddo, LOW);     // Đèn tắt
   }
 }
