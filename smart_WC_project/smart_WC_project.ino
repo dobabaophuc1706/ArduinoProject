@@ -3,7 +3,7 @@
 Servo myservo;
 #include <SoftwareSerial.h>
 SoftwareSerial SIM900(2, 3);
-String number1 = "0932329328";  // Thay đổi SĐT
+String number1 = "phone number";  // Thay đổi SĐT
 String val;
 int baodong = 0;
 int gui = 0;
